@@ -1,0 +1,20 @@
+<div style="padding:20px">
+    <form style="height: 500px; width:500px;">
+        <fieldset>
+            <legend>customer Info</legend>
+            
+            <label>Select Month: </label> 
+            <select (change)="selectmonth($event)">
+                <option *ngFor="let m of months">{{m}}</option>
+            </select>
+            <br/>
+    <label>enter Name:</label>
+    <input type="text" id="custid"  [(ngModel)]="custid"  />
+    <br/>
+    <label>enter City:</label>
+    <input type="text" id="custcity" />
+    <input  type="button" value="Click" (click)="acceptdata($event)" >
+</fieldset>
+</form>
+
+</div>

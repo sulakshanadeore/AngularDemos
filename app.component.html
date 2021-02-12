@@ -1,0 +1,35 @@
+<div id="div1">
+<h1>Welcome to Angular {{title}}</h1>
+<h2>This is magic</h2>
+<h1>{{todaysDate}}</h1>
+</div>
+<hr/>
+<div id="div2">
+    <select>
+        <option *ngFor="let m of months">{{m}}</option>
+    </select>
+</div>
+
+<div *ngFor="let m of months">
+    <p>{{m}}</p>
+
+</div>
+<hr/>
+
+<div>
+    <p *ngIf="status;else falsecondition">The status is true now</p>
+    <ng-template #falsecondition>The status is false now</ng-template>
+    
+
+</div>
+
+<div>
+    <span *ngIf="result; then c1 else c2"></span>
+    <ng-template #c1>The result is true now</ng-template>
+    <ng-template #c2>The result is false now</ng-template>
+
+</div>
+
+<!-- <div id="div2">
+<app-customer></app-customer>
+</div> -->
